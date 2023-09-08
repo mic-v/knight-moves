@@ -26,5 +26,4 @@ setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 
 
 const board = new ChessBoard();
-board.displaySquares();
-board.knightMoves([0,0], [7,0]);
+console.log(board.knightMoves([0,0], [1,2]));

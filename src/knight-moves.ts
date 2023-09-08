@@ -5,7 +5,7 @@ type Coord = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
  * */
 type Coords = [Coord, Coord];
 
- class Square {
+export class Square {
     private x:number;
     private y:number;
     private neighbors: Square[] = [];
@@ -100,6 +100,9 @@ export class ChessBoard {
      * https://www.geeksforgeeks.org/introduction-to-dijkstras-shortest-path-algorithm/
      */
     public knightMoves(start: Coords, end: Coords) {
+        if(start[0] === end[0] && start[1] === end[1]) {
+            return [start];
+        }
         let queue : Square[] = [];
         let visited = new Set();
         let startSquare = this.squares[start[0] * 8 + start[1]];
@@ -127,9 +130,7 @@ export class ChessBoard {
 
             if(v_coords[0] === end[0] && v_coords[1] === end[1]) {
                 found = true;
-                console.log("found");
-                console.log(paths.get(v));
-                break;
+                return paths.get(v);
             }
             if(v?.getNeighbors() === undefined) {
                 throw "Error, v neighbors are undefined";
