@@ -7,7 +7,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <section id="main-content">
       <div id="chess">
           <figure id="knight">
-            <img src="/chess.png">
+            <img src="./knight.png">
           </figure>
           <div id="chessboard">
           </div>
@@ -117,10 +117,6 @@ function inputSubmit(event: any) {
     let x = Math.abs((firstMove[1]) * 40);
     knightPiece.style.transform = "translate(" + x + "px, " + y + "px)";
   }
-
-  console.log(knightMoves);
-
-
 }
 
 function convertTextMoveToArray(str: string | null) {
