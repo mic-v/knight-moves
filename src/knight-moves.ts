@@ -1,9 +1,9 @@
-type Coord = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
+export type Coord = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
 /**
  * Let Coords[0] be x or rows, and Coords[1] be y or columns
  * */
-type Coords = [Coord, Coord];
+export type Coords = [Coord, Coord];
 
 export class Square {
     private x:number;
@@ -125,8 +125,6 @@ export class ChessBoard {
             } else {
                 throw "Error, v coords are undefined";
             } 
-
-            console.log(v);
 
             if(v_coords[0] === end[0] && v_coords[1] === end[1]) {
                 found = true;
