@@ -15,6 +15,9 @@ Uses Vite for development and vitest for testing knight moves
 - Wanted to try it out instead of NPM
 - Documentation website format was better compared to NPM's
 - Learning new technologies
+  - Vite
+  - Vitest
+  - Typescript
 
 ## Knight Moves
 - Uses breadth-first search to find the shortest path
