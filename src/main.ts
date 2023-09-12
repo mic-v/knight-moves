@@ -1,7 +1,4 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
 import { ChessBoard, Coords, Coord } from './knight-moves.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
